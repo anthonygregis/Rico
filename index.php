@@ -2,7 +2,10 @@
 // Initialize the session
 session_start();
 
-require_once 'assets/php/jobs.php';
+if(isset($_GET["sort"])) { 
+    $sort = '?sort=' . $_GET["sort"];
+}
+require_once 'assets/php/jobs.php' . $sort;
 
 function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;

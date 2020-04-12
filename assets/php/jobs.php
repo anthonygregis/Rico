@@ -9,7 +9,12 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, crimeTime DESC";
+if(!isset($_GET["sort"]) || $_GET["sort"] == "time") {
+    $query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, crimeTime DESC";
+} else if($_GET["sort"] == "value") {
+    $query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, paymentValue DESC";
+}
+
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 $tableArray = array();
 $counter = 0;
