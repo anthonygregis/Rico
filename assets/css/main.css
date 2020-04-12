@@ -65,8 +65,6 @@ body .entries .entry .title {
 .talon {
   -webkit-animation: bgcolor 5s infinite !important;
   animation: bgcolor 5s infinite !important;
-  -webkit-animation-direction: alternate !important;
-  animation-direction: alternate !important;
 }
 body .entries .entry .title:before {
   content: '';
