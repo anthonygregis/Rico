@@ -54,7 +54,7 @@ function time_elapsed_string($datetime, $full = false) {
 		<div class="demo-card demo-card--step<?php echo $row['counter'] + 1 ?>">
 			<div class="head">
 				<div class="number-box">
-					<span><?php if($row['sponsoredJob'] == 1) : ?>Talon<?php endif; ?></span>
+					<span><?php echo $row['counter'] + 1 ?></span>
 				</div>
 				<h2><span class="small"><?php echo time_elapsed_string($row['crimeTime']) ?></span> <?php echo $row['crime'] ?></h2>
 			</div>
