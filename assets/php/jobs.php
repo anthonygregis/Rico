@@ -22,6 +22,7 @@ while ($row = mysqli_fetch_array($result))
 {
      $tableArray[$counter]['crime'] = $row['crime'];
      $tableArray[$counter]['crimeUuid'] = $row['crimeUuid'];
+     $tableArray[$counter]['sponsoredJob'] = $row['sponsoredJob'];
      $tableArray[$counter]['paymentType'] = $row['paymentType'];
 	 $tableArray[$counter]['paymentAmount'] = $row['paymentAmount'];
      $tableArray[$counter]['crimeTime'] = date('M d h:i A',strtotime($row['crimeTime']));
