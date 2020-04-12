@@ -72,9 +72,8 @@ body .entries .entry .title {
   animation: bgcolor 10s infinite !important;
 }
 .image-talon {
-  position: absolute;
-  top: -10%;
-  left: 12%;
+  position: inherit;
+  transform: translate(-6px, 25%);
 }
 body .entries .entry .title:before {
   content: '';
