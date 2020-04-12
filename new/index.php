@@ -51,7 +51,7 @@ function time_elapsed_string($datetime, $full = false) {
 	<p class="leader">All cards must be the same height and width for space calculations on large screens.</p>
 	<div class="demo-card-wrapper">
 	<?php $i = 1; foreach($tableArray as $row) {?>
-		<div class="demo-card demo-card--step<?php echo $row['counter'] ?>">
+		<div class="demo-card demo-card--step<?php echo $row['counter'] + 1 ?>">
 			<div class="head">
 				<div class="number-box">
 					<span><?php if($row['sponsoredJob'] == 1) : ?>Talon<?php endif; ?></span>
