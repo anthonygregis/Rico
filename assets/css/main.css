@@ -1,18 +1,27 @@
 @keyframes bgcolor {
   0% {
-      color: red
+    color: red;
   }
-
+  15% {
+    color: white;
+  }
   30% {
-      color: white
+    color: red;
   }
-
+  45% {
+    color: white;
+  }
   60% {
-      color: red
+    color: red;
   }
-
+  75% {
+    color: white;
+  }
+  90% {
+    color: red;
+  }
   100% {
-      color: white
+    color: white;
   }
 }
 
@@ -59,8 +68,8 @@ body .entries .entry .title {
   color: #fff;
 }
 .talon {
-  -webkit-animation: bgcolor 4s infinite !important;
-  animation: bgcolor 4s infinite !important;
+  -webkit-animation: bgcolor 10s infinite !important;
+  animation: bgcolor 10s infinite !important;
 }
 body .entries .entry .title:before {
   content: '';
