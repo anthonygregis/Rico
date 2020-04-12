@@ -4869,6 +4869,7 @@ Vertical Timeline - by CodyHouse.co
         margin-left: 0;
         padding: 1.6em;
         width: 45%;
+        height: 30%;
         /* Force Hardware Acceleration */
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
