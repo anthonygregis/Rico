@@ -340,3 +340,6 @@ body .entries .entry:nth-child(2n) .title.big:before {
   .intro input[type=text]::placeholder {
       color: red;
   }
+  a {
+    text-decoration: none;
+  }
