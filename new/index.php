@@ -41,7 +41,6 @@ function time_elapsed_string($datetime, $full = false) {
   <meta charset="UTF-8">
   <title>RI₵O</title>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Droid+Sans'>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
