@@ -43,7 +43,7 @@ function time_elapsed_string($datetime, $full = false) {
     <head>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/fonts/circular-std/style.css">
-        <link rel="stylesheet" href="assets/css/dabcoin.style.css">
+        <!-- <link rel="stylesheet" href="assets/css/dabcoin.style.css"> -->
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.css">
         <link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
