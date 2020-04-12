@@ -6,10 +6,16 @@ if(isset($_GET["loggedin"])) {
   $loggedin = true;
 }
 
+if(isset($_GET["job"])) { 
+  $job = $_GET["job"];
+  require_once 'assets/php/jobDetail.php';
+} else {
+  require_once 'assets/php/jobs.php';
+}
+
 if(isset($_GET["sort"])) { 
     $sort = $_GET["sort"];
 }
-require_once 'assets/php/jobs.php';
 
 function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;
@@ -76,7 +82,7 @@ function time_elapsed_string($datetime, $full = false) {
 <script src="assets/js/index.js"></script>
 </body>
 <?php endif; ?>
-<?php if(isset($_GET["job"])) : ?>
+<?php if(isset($job)) : ?>
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
@@ -90,6 +96,11 @@ function time_elapsed_string($datetime, $full = false) {
     </div>
     <input type="text" name="search" placeholder="Search.."> -->
   </div>
+  <section class="intro">
+        <p>Rico is designed to allow discreet contracts to be carried out between employers and workers. Designed to protect both parties and achieve maximum effeciency.
+        Employing a reputation system for both parties to ensure that you are rewarded for providing / completing contracts effectively.</p> 
+      <br>
+  </section>
 <script src="assets/js/index.js"></script>
 </body>
 <?php endif; ?>
