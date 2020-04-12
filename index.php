@@ -99,14 +99,14 @@ function time_elapsed_string($datetime, $full = false) {
   <?php $i = 1; foreach($tableArray as $row) {?>
   <section class="intro">
         <p>Retrieved Job Information: </p>
-        <p><?php echo $row['crime'] ?></p>
-        <p><?php echo $row['crimeUuid'] ?></p> 
-        <p><?php echo $row['crimeDescription'] ?></p> 
-        <p><?php echo $row['workerLimit'] ?></p> 
-        <p><?php echo $row['sponsoredJob'] ?></p> 
-        <p><?php echo $row['paymentType'] ?></p> 
-        <p><?php echo $row['paymentAmount'] ?></p> 
-        <p><?php echo $row['crimeTime'] ?></p> 
+        <p>Job Type: <?php echo $row['crime'] ?></p>
+        <p>Job UUID: <?php echo $row['crimeUuid'] ?></p> 
+        <p>Job Description: <?php echo $row['crimeDescription'] ?></p> 
+        <p>Worker Limit: <?php echo $row['workerLimit'] ?></p> 
+        <p>Sponsored Worker: <?php if($row['sponsoredJob'] == 1) {echo "Talon"} if($row['sponsoredJob'] == 2) {echo "Eugene"} ?></p> 
+        <p>Payment Type: <?php echo $row['paymentType'] ?></p> 
+        <p>Payment Amount: <?php echo $row['paymentAmount'] ?></p> 
+        <p>Posted At: <?php echo $row['crimeTime'] ?></p> 
       <br>
   </section>
   <?php } ?>
