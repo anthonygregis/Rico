@@ -85,8 +85,8 @@ function time_elapsed_string($datetime, $full = false) {
                     <option value="?sort=value">Value</option>
                     <option value="?sort=rep">Seller Rep</option>
                 </select>
-            </div> -->
-            <input type="text" name="search" placeholder="Search..">
+            </div>
+            <input type="text" name="search" placeholder="Search.."> -->
         </div>
         <br>
         <section class="cd-timeline js-cd-timeline">
