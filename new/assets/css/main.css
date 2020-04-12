@@ -1,0 +1,226 @@
+.header {
+    height: 15%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.header .styled {
+  color: white;
+  border: 1px solid red;
+  background-color: transparent;
+}
+.glitch {
+    font-size: 100px;
+    color: white;
+    position: relative;
+}
+@keyframes glitch-anim-1 {
+    0% {
+      clip-path: inset(31% 0 2% 0);
+    }
+    5.8823529412% {
+      clip-path: inset(56% 0 36% 0);
+    }
+    11.7647058824% {
+      clip-path: inset(37% 0 46% 0);
+    }
+    17.6470588235% {
+      clip-path: inset(8% 0 87% 0);
+    }
+    23.5294117647% {
+      clip-path: inset(92% 0 1% 0);
+    }
+    29.4117647059% {
+      clip-path: inset(40% 0 36% 0);
+    }
+    35.2941176471% {
+      clip-path: inset(20% 0 17% 0);
+    }
+    41.1764705882% {
+      clip-path: inset(59% 0 17% 0);
+    }
+    47.0588235294% {
+      clip-path: inset(16% 0 73% 0);
+    }
+    52.9411764706% {
+      clip-path: inset(58% 0 38% 0);
+    }
+    58.8235294118% {
+      clip-path: inset(49% 0 3% 0);
+    }
+    64.7058823529% {
+      clip-path: inset(80% 0 14% 0);
+    }
+    70.5882352941% {
+      clip-path: inset(59% 0 31% 0);
+    }
+    76.4705882353% {
+      clip-path: inset(33% 0 25% 0);
+    }
+    82.3529411765% {
+      clip-path: inset(56% 0 28% 0);
+    }
+    88.2352941176% {
+      clip-path: inset(7% 0 16% 0);
+    }
+    94.1176470588% {
+      clip-path: inset(75% 0 6% 0);
+    }
+    100% {
+      clip-path: inset(6% 0 93% 0);
+    }
+}
+@keyframes glitch-anim-2 {
+    0% {
+      clip-path: inset(57% 0 40% 0);
+    }
+    5.8823529412% {
+      clip-path: inset(85% 0 14% 0);
+    }
+    11.7647058824% {
+      clip-path: inset(17% 0 80% 0);
+    }
+    17.6470588235% {
+      clip-path: inset(54% 0 40% 0);
+    }
+    23.5294117647% {
+      clip-path: inset(67% 0 2% 0);
+    }
+    29.4117647059% {
+      clip-path: inset(17% 0 29% 0);
+    }
+    35.2941176471% {
+      clip-path: inset(20% 0 27% 0);
+    }
+    41.1764705882% {
+      clip-path: inset(76% 0 8% 0);
+    }
+    47.0588235294% {
+      clip-path: inset(21% 0 65% 0);
+    }
+    52.9411764706% {
+      clip-path: inset(55% 0 31% 0);
+    }
+    58.8235294118% {
+      clip-path: inset(49% 0 29% 0);
+    }
+    64.7058823529% {
+      clip-path: inset(31% 0 9% 0);
+    }
+    70.5882352941% {
+      clip-path: inset(2% 0 77% 0);
+    }
+    76.4705882353% {
+      clip-path: inset(42% 0 49% 0);
+    }
+    82.3529411765% {
+      clip-path: inset(32% 0 59% 0);
+    }
+    88.2352941176% {
+      clip-path: inset(72% 0 15% 0);
+    }
+    94.1176470588% {
+      clip-path: inset(4% 0 91% 0);
+    }
+    100% {
+      clip-path: inset(59% 0 36% 0);
+    }
+}
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+}
+.glitch::after {
+    left: 2px;
+    text-shadow: -1px 0 red;
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+.glitch::before {
+    left: -2px;
+    text-shadow: 2px 0 blue;
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+.styled-select {
+    display: inline;
+    padding: 5px;
+    margin-right: 8px;
+    background-color: black;
+    color: red;
+    border: 1px solid red;
+    height: 5%;
+    overflow: hidden;
+    width: 55px;
+ }
+ 
+ .styled-select select {
+    padding: 2px;
+    background: black;
+    color: red;
+    border: none;
+    font-size: 14px;
+    height: 5%;
+    width: 80px;
+ }
+
+ .header input[type=text] {
+    display: inline;
+    border: 1px solid red;
+    background-color: black;
+    color: red;
+    height: 5%;
+    width: 130px;
+    text-align: center;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  .header input[type=text]:focus {
+    width: 130px;
+    outline-width: 0;
+  }
+
+  .header input[type=text]:focus::placeholder {
+    color: transparent;
+  }
+
+  .header input[type=text]::placeholder {
+      color: red;
+  }
+  .intro {
+    margin: auto;
+    color: red;
+    border: 1px solid red;
+    padding: 30px;
+    text-align: center;
+    width: 25%;
+  }
+  .intro input[type=text] {
+    display: inline;
+    border: 1px solid red;
+    background-color: black;
+    color: red;
+    height: 29px;
+    width: 45%;
+    text-align: center;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  .intro input[type=text]:focus {
+    width: 65%;
+    outline-width: 0;
+  }
+
+  .intro input[type=text]:focus::placeholder {
+    color: transparent;
+  }
+
+  .intro input[type=text]::placeholder {
+      color: red;
+  }
