@@ -78,22 +78,21 @@ function time_elapsed_string($datetime, $full = false) {
     <body>
         <div class="header">
             <div class="glitch" data-text="RI₵O">RI₵O</div>
-            <div class="styled-select slate">
+            <!-- <div class="styled-select slate">
                 <select onchange="window.location=this.value">
                     <option value="" disabled selected>Sort</option>
                     <option value="?sort=time">Time</option>
                     <option value="?sort=value">Value</option>
                     <option value="?sort=rep">Seller Rep</option>
                 </select>
-            </div>
+            </div> -->
             <input type="text" name="search" placeholder="Search..">
         </div>
         <br>
         <section class="cd-timeline js-cd-timeline">
             <div class="cd-timeline__container">
                 <?php $i = 1; foreach($tableArray as $row) {?>
-                
-                <div class="cd-timeline__block js-cd-block">
+                <div class="cd-timeline__block js-cd-block <?php if($row['sponsoredJob'] == 1) { echo "sponsored"; } ?>">
                 <a href="?job=<?php echo $row['crimeUuid'] ?>">
                     <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
                         <p>$</p>
