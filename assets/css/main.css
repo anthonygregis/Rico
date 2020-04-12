@@ -11,12 +11,8 @@
       color: red
   }
 
-  90% {
-      color: white
-  }
-
   100% {
-      color: red
+      color: white
   }
 }
 
@@ -63,8 +59,8 @@ body .entries .entry .title {
   color: #fff;
 }
 .talon {
-  -webkit-animation: bgcolor 5s infinite !important;
-  animation: bgcolor 5s infinite !important;
+  -webkit-animation: bgcolor 2s infinite !important;
+  animation: bgcolor 2s infinite !important;
 }
 body .entries .entry .title:before {
   content: '';
