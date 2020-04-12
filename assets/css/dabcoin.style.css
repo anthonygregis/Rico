@@ -4784,8 +4784,8 @@ Vertical Timeline - by CodyHouse.co
     border: 1px solid red;
 }
 
-.cd-timeline__block.js-cd-block.sponsored {
-    border: 1px solid gold !important;
+.cd-timeline__block .js-cd-block .sponsored {
+    border: 1px solid #FFD700 !important;
 }
 
 .cd-timeline__content h3 {
