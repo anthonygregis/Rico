@@ -47,6 +47,7 @@ function time_elapsed_string($datetime, $full = false) {
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Droid+Sans'>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
+<?php if(!isset($_GET["job"])) : ?>
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
@@ -72,7 +73,24 @@ function time_elapsed_string($datetime, $full = false) {
       </div>
   <?php } ?>
 </div>
-  
 <script src="assets/js/index.js"></script>
 </body>
+<?php endif; ?>
+<?php if(isset($_GET["job"])) : ?>
+<body>
+  <div class="header">
+    <div class="glitch" data-text="RI₵O">RI₵O</div>
+    <!-- <div class="styled-select slate">
+        <select onchange="window.location=this.value">
+            <option value="" disabled selected>Sort</option>
+            <option value="?sort=time">Time</option>
+            <option value="?sort=value">Value</option>
+            <option value="?sort=rep">Seller Rep</option>
+        </select>
+    </div>
+    <input type="text" name="search" placeholder="Search.."> -->
+  </div>
+<script src="assets/js/index.js"></script>
+</body>
+<?php endif; ?>
 </html>
