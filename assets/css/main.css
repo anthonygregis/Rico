@@ -63,8 +63,8 @@ body .entries .entry .title {
   color: #fff;
 }
 .talon {
-  -webkit-animation: bgcolor 20s infinite !important;
-  animation: bgcolor 10s infinite !important;
+  -webkit-animation: bgcolor 5s infinite !important;
+  animation: bgcolor 5s infinite !important;
   -webkit-animation-direction: alternate !important;
   animation-direction: alternate !important;
 }
