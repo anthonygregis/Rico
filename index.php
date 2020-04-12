@@ -98,7 +98,7 @@ function time_elapsed_string($datetime, $full = false) {
   </div>
   <?php $i = 1; foreach($tableArray as $row) {?>
   <section class="intro">
-        <p>Retrieved Job Information: </p>
+        <p>-- Retrieved Job Information --</p>
         <p>Job Type: <?php echo $row['crime'] ?></p>
         <p>Job UUID: <?php echo $row['crimeUuid'] ?></p> 
         <p>Job Description: <?php echo $row['crimeDescription'] ?></p> 
