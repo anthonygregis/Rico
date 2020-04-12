@@ -96,11 +96,20 @@ function time_elapsed_string($datetime, $full = false) {
     </div>
     <input type="text" name="search" placeholder="Search.."> -->
   </div>
+  <?php $i = 1; foreach($tableArray as $row) {?>
   <section class="intro">
-        <p>Rico is designed to allow discreet contracts to be carried out between employers and workers. Designed to protect both parties and achieve maximum effeciency.
-        Employing a reputation system for both parties to ensure that you are rewarded for providing / completing contracts effectively.</p> 
+        <p>Retrieved Job Information: </p>
+        <p><?php echo $row['crime'] ?></p>
+        <p><?php echo $row['crimeUuid'] ?></p> 
+        <p><?php echo $row['crimeDescription'] ?></p> 
+        <p><?php echo $row['workerLimit'] ?></p> 
+        <p><?php echo $row['sponsoredJob'] ?></p> 
+        <p><?php echo $row['paymentType'] ?></p> 
+        <p><?php echo $row['paymentAmount'] ?></p> 
+        <p><?php echo $row['crimeTime'] ?></p> 
       <br>
   </section>
+  <?php } ?>
 <script src="assets/js/index.js"></script>
 </body>
 <?php endif; ?>
