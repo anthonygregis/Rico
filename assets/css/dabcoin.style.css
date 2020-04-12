@@ -4794,8 +4794,9 @@ Vertical Timeline - by CodyHouse.co
 }
 
 .cd-timeline__content.js-cd-content.sponsored {
-  border: 1px solid;
-  -webkit-animation:Border 5s infinite alternate;
+    border: 1px solid;
+    background: linear-gradient(45deg, #ffffff00, red);
+    -webkit-animation: Border 5s infinite alternate;
 }
 
 .cd-timeline__content h3 {
