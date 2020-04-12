@@ -1,22 +1,22 @@
 @keyframes bgcolor {
   0% {
-      background-color: red
+      color: red
   }
 
   30% {
-      background-color: white
+      color: white
   }
 
   60% {
-      background-color: red
+      color: red
   }
 
   90% {
-      background-color: white
+      color: white
   }
 
   100% {
-      background-color: red
+      color: red
   }
 }
 
