@@ -92,12 +92,12 @@ function time_elapsed_string($datetime, $full = false) {
         <section class="cd-timeline js-cd-timeline">
             <div class="cd-timeline__container">
                 <?php $i = 1; foreach($tableArray as $row) {?>
-                <div class="cd-timeline__block js-cd-block <?php if($row['sponsoredJob'] == 1) { echo "sponsored"; } ?>">
+                <div class="cd-timeline__block js-cd-block">
                 <a href="?job=<?php echo $row['crimeUuid'] ?>">
                     <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
                         <p>$</p>
                     </div>
-                    <div class="cd-timeline__content js-cd-content">
+                    <div class="cd-timeline__content js-cd-content <?php if($row['sponsoredJob'] == 1) { echo "sponsored"; } ?>">
                         <h3><strong><?php echo $row['crime'] ?></strong></h3>
                         <p><strong><?php echo time_elapsed_string($row['crimeTime']) ?></strong> NEED TO ADD CRIME ICONS</p>
                     </div>
