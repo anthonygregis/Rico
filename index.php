@@ -118,4 +118,34 @@ function time_elapsed_string($datetime, $full = false) {
         </script>
     </body>
     <?php endif; ?>
+    <?php if(isset($_GET["job"])) : ?>
+        <body>
+        <div class="header">
+            <div class="glitch" data-text="RI₵O">RI₵O</div>
+            <!-- <div class="styled-select slate">
+                <select onchange="window.location=this.value">
+                    <option value="" disabled selected>Sort</option>
+                    <option value="?sort=time">Time</option>
+                    <option value="?sort=value">Value</option>
+                    <option value="?sort=rep">Seller Rep</option>
+                </select>
+            </div> -->
+            <input type="text" name="search" placeholder="Search..">
+        </div>
+        <br>
+        <section class="job-details">
+            <p>Your job details are the following:</p>
+        </section>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script>
+            var input = document.getElementById("referral");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+               event.preventDefault();
+               window.location.href = "http://nopixel.online/rico?loggedin=true";
+              }
+            });
+        </script>
+    </body>
+    <?php endif; ?>
 </html>
