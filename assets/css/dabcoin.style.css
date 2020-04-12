@@ -4785,7 +4785,7 @@ Vertical Timeline - by CodyHouse.co
 }
 
 .cd-timeline__content.js-cd-content.sponsored {
-    border: 1px solid blue !important;
+    border: 1px solid #ffd700 !important;
 }
 
 .cd-timeline__content h3 {
@@ -4863,6 +4863,16 @@ Vertical Timeline - by CodyHouse.co
         left: 100%;
         border-color: transparent;
         border-left-color: red;
+    }
+    .cd-timeline__content.js-cd-content.sponsored::before {
+        top: 40%;
+        left: 100%;
+        border-color: transparent;
+        border-left-color: #ffd700 !important;
+    }
+    .cd-timeline__block:nth-child(even) .cd-timeline__content.js-cd-content.sponsored::before {
+        border-color: transparent;
+        border-right-color: #ffd700 !important;
     }
     .cd-timeline__read-more {
         float: left;
