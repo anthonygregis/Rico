@@ -9,9 +9,9 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-if(!isset($_GET["sort"]) || $_GET["sort"] == "time") {
+if(!isset($sort) || $sort == "time") {
     $query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, crimeTime DESC";
-} else if($_GET["sort"] == "value") {
+} else if($sort == "value") {
     $query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, paymentValue DESC";
 }
 

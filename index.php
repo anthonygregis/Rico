@@ -3,9 +3,9 @@
 session_start();
 
 if(isset($_GET["sort"])) { 
-    $sort = '?sort=' . $_GET["sort"];
+    $sort = $_GET["sort"];
 }
-require_once 'assets/php/jobs.php' . $sort;
+require_once 'assets/php/jobs.php';
 
 function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;

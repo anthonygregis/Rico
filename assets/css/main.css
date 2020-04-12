@@ -159,12 +159,12 @@ body {
  }
  
  .styled-select select {
-    padding: 5px;
+    padding: 2px;
     background: black;
     color: red;
     border: none;
     font-size: 14px;
-    height: 25px;
+    height: 23px;
     width: 80px;
  }
 
