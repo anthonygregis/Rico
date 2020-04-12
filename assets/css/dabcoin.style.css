@@ -4606,7 +4606,7 @@ Patterns - reusable parts of our design
 
 -------------------------------- */
 
-@media only screen and (min-width:1170px) {
+@media only screen {
     .cd-is-hidden {
         visibility: hidden;
     }
@@ -4644,7 +4644,7 @@ Vertical Timeline - by CodyHouse.co
     background: #dedee9;
 }
 
-@media only screen and (min-width:1170px) {
+@media only screen {
     .cd-timeline {
         margin-top: 3em;
         margin-bottom: 3em;
@@ -4675,7 +4675,7 @@ Vertical Timeline - by CodyHouse.co
     margin-bottom: 0;
 }
 
-@media only screen and (min-width:1170px) {
+@media only screen {
     .cd-timeline__block {
         margin: 4em 0;
     }
@@ -4723,7 +4723,7 @@ Vertical Timeline - by CodyHouse.co
     background: #ffc108;
 }
 
-@media only screen and (min-width:1170px) {
+@media only screen {
     .cd-timeline__img {
         width: 60px;
         height: 60px;
@@ -4842,14 +4842,14 @@ Vertical Timeline - by CodyHouse.co
     opacity: .7;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen {
     .cd-timeline__content h2 {}
     .cd-timeline__content p {}
     .cd-timeline__read-more,
     .cd-timeline__date {}
 }
 
-@media only screen and (min-width:1170px) {
+@media only screen {
     .cd-timeline__content {
         margin-left: 0;
         padding: 1.6em;
@@ -4910,7 +4910,7 @@ Vertical Timeline - by CodyHouse.co
     }
 }
 
-@media only screen and (min-width:1170px) {
+@media only screen {
 
     /* inverse bounce effect on even content blocks */
     .cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--bounce-in {
