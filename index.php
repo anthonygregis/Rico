@@ -78,7 +78,6 @@ function time_elapsed_string($datetime, $full = false) {
     <body>
         <div class="header">
             <div class="glitch" data-text="RI₵O">RI₵O</div>
-            <button class="styled" type="button">Return</button>
             <!-- <div class="styled-select slate">
                 <select onchange="window.location=this.value">
                     <option value="" disabled selected>Sort</option>
@@ -123,6 +122,7 @@ function time_elapsed_string($datetime, $full = false) {
         <body>
         <div class="header">
             <div class="glitch" data-text="RI₵O">RI₵O</div>
+            <button class="styled" type="button">Return</button>
             <!-- <div class="styled-select slate">
                 <select onchange="window.location=this.value">
                     <option value="" disabled selected>Sort</option>
@@ -130,8 +130,8 @@ function time_elapsed_string($datetime, $full = false) {
                     <option value="?sort=value">Value</option>
                     <option value="?sort=rep">Seller Rep</option>
                 </select>
-            </div> -->
-            <input type="text" name="search" placeholder="Search..">
+            </div> 
+            <input type="text" name="search" placeholder="Search.."> -->
         </div>
         <br>
         <section class="job-details">
