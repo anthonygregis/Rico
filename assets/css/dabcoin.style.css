@@ -4784,8 +4784,18 @@ Vertical Timeline - by CodyHouse.co
     border: 1px solid red;
 }
 
+@-webkit-keyframes Border {
+    0% {border-color: crimson;}
+    20% {border-color: orange;}
+    40% {border-color: goldenrod;}
+    60% {border-color: green;}
+    80% {border-color: DarkBlue;}
+    100% {border-color: purple}
+}
+
 .cd-timeline__content.js-cd-content.sponsored {
-    border: 1px solid #ffd700 !important;
+  border: 1px solid;
+  -webkit-animation:Border 5s infinite alternate;
 }
 
 .cd-timeline__content h3 {
