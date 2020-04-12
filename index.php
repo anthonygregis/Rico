@@ -60,14 +60,14 @@ function time_elapsed_string($datetime, $full = false) {
   <div class="entries">
   <?php $i = 1; foreach($tableArray as $row) {?>
   <div class="entry">
-    <div class="title"><?php echo $row['crime'] ?></div>
-    <div class="body big">
+    <div class="title big"><?php echo $row['crime'] ?></div>
+    <div class="body">
       <p><?php echo time_elapsed_string($row['crimeTime']) ?></strong></p>
     </div>
   </div>
   <?php } ?>
 </div>
   
-<script src="js/index.js"></script>
+<script src="assets/js/index.js"></script>
 </body>
 </html>
