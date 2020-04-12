@@ -43,7 +43,7 @@ function time_elapsed_string($datetime, $full = false) {
     <head>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/fonts/circular-std/style.css">
-        <!-- <link rel="stylesheet" href="assets/css/dabcoin.style.css"> -->
+        <link rel="stylesheet" href="assets/css/dabcoin.style.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.css">
         <link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -89,25 +89,7 @@ function time_elapsed_string($datetime, $full = false) {
             <input type="text" name="search" placeholder="Search.."> -->
         </div>
         <br>
-        <section id=timeline>
-	    <div class="demo-card-wrapper">
-        <?php $i = 1; foreach($tableArray as $row) {?>
-		    <div class="demo-card demo-card--step<?php echo $row['counter'] ?>">
-		    	<div class="head">
-		    		<div class="number-box">
-		    			<span><?php if($row['sponsoredJob'] == 1) : ?>Talon<?php endif; ?></span>
-		    		</div>
-		    		<h2><span class="small"><?php echo time_elapsed_string($row['crimeTime']) ?></span> <?php echo $row['crime'] ?></h2>
-		    	</div>
-		    	<div class="body">
-		    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-		    		<img src="http://placehold.it/1000x500" alt="Graphic">
-		    	</div>
-		    </div>
-        <?php } ?>
-	    </div>
-        </section>
-        <!-- <section class="cd-timeline js-cd-timeline">
+        <section class="cd-timeline js-cd-timeline">
             <div class="cd-timeline__container">
                 <?php $i = 1; foreach($tableArray as $row) {?>
                 <div class="cd-timeline__block js-cd-block">
@@ -117,13 +99,13 @@ function time_elapsed_string($datetime, $full = false) {
                     </div>
                     <div class="cd-timeline__content js-cd-content <?php if($row['sponsoredJob'] == 1) { echo "sponsored"; } ?>">
                         <h3><strong><?php echo $row['crime'] ?></strong></h3>
-                        <p><strong><?php echo time_elapsed_string($row['crimeTime']) ?></strong> <?php if($row['sponsoredJob'] == 1) : ?><img class="talon" width="12%" src="assets/img/talon3.png"/><?php endif; ?></p>
+                        <p><strong><?php echo time_elapsed_string($row['crimeTime']) ?></strong> <?php if($row['sponsoredJob'] == 1) : ?><img class="talon" width="7%" src="assets/img/talon3.png"/><?php endif; ?></p>
                     </div>
                     </a>
                 </div>
                 <?php } ?>
             </div>
-        </section> -->
+        </section>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 		<script>
             var input = document.getElementById("referral");
