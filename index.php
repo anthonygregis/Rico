@@ -99,7 +99,7 @@ function time_elapsed_string($datetime, $full = false) {
                     </div>
                     <div class="cd-timeline__content js-cd-content <?php if($row['sponsoredJob'] == 1) { echo "sponsored"; } ?>">
                         <h3><strong><?php echo $row['crime'] ?></strong></h3>
-                        <p><strong><?php echo time_elapsed_string($row['crimeTime']) ?></strong> <?php if($row['sponsoredJob'] == 1) : ?><img width="7%" src="assets/img/talon.png"/><img width="7%" src="assets/img/talon2.png"/><img width="7%" src="assets/img/talon3.png"/><?php endif; ?></p>
+                        <p><strong><?php echo time_elapsed_string($row['crimeTime']) ?></strong> <?php if($row['sponsoredJob'] == 1) : ?><img width="7%" src="assets/img/talon3.png"/><?php endif; ?></p>
                     </div>
                     </a>
                 </div>
