@@ -12,7 +12,7 @@ if($link === false){
 if(!isset($sort) || $sort == "time") {
     $query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, crimeTime DESC";
 } else if($sort == "value") {
-    $query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, paymentValue DESC";
+    $query = "SELECT * FROM jobs ORDER BY sponsoredJob DESC, paymentAmount DESC";
 }
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
