@@ -3,6 +3,8 @@
     margin: 0 auto;
     text-align: center;
     position: relative;
+    background: black;
+    z-index: 1000;
 }
 .header .styled {
   color: white;
