@@ -10,7 +10,7 @@ if($link === false){
 }
 
 if(isset($job)) {
-    $query = "SELECT * FROM jobs WHERE crimeUuid = '$job' ORDER BY sponsoredJob DESC, crimeTime DESC";
+    $query = "SELECT * FROM jobs WHERE crimeUuid = '$job'";
 }
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));

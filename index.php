@@ -6,6 +6,10 @@ if(isset($_GET["loggedin"])) {
   $loggedin = true;
 }
 
+if(isset($_GET["sort"])) { 
+  $sort = $_GET["sort"];
+}
+
 if(isset($_GET["job"])) { 
   $job = $_GET["job"];
   require_once 'assets/php/jobDetail.php';
@@ -13,38 +17,9 @@ if(isset($_GET["job"])) {
   require_once 'assets/php/jobs.php';
 }
 
-if(isset($_GET["sort"])) { 
-    $sort = $_GET["sort"];
-}
 
-function time_elapsed_string($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime);
-    $diff = $now->diff($ago);
+require_once 'assets/php/time_elapsed.php'
 
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
-
-    $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-    );
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
-}
 ?>
 <html >
 <head>
@@ -86,6 +61,7 @@ function time_elapsed_string($datetime, $full = false) {
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
+    <input type="button" value="Return" onclick="window.location.href = 'https://nopixel.online/rico/test/index.php';">
     <!-- <div class="styled-select slate">
         <select onchange="window.location=this.value">
             <option value="" disabled selected>Sort</option>
