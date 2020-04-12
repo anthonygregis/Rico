@@ -1,4 +1,4 @@
-@keyframes bgcolor {
+@keyframes bg-talon-color {
   0% {
     color: red;
   }
@@ -19,6 +19,33 @@
   }
   90% {
     color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes bg-gnome-color {
+  0% {
+    color: blue;
+  }
+  15% {
+    color: white;
+  }
+  30% {
+    color: blue;
+  }
+  45% {
+    color: white;
+  }
+  60% {
+    color: blue;
+  }
+  75% {
+    color: white;
+  }
+  90% {
+    color: blue;
   }
   100% {
     color: white;
@@ -68,8 +95,12 @@ body .entries .entry .title {
   color: #fff;
 }
 .talon {
-  -webkit-animation: bgcolor 10s infinite !important;
-  animation: bgcolor 10s infinite !important;
+  -webkit-animation: bg-talon-color 10s infinite !important;
+  animation: bg-talon-color 10s infinite !important;
+}
+.gnome {
+  -webkit-animation: bg-gnome-color 10s infinite !important;
+  animation: bg-gnome-color 10s infinite !important;
 }
 .image-talon {
   position: inherit;
