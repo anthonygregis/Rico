@@ -103,7 +103,7 @@ function time_elapsed_string($datetime, $full = false) {
         <p>Job UUID: <?php echo $row['crimeUuid'] ?></p> 
         <p>Job Description: <?php echo $row['crimeDescription'] ?></p> 
         <p>Worker Limit: <?php echo $row['workerLimit'] ?></p> 
-        <p>Sponsored Worker: <?php if($row['sponsoredJob'] == 1) {echo "Talon";} if($row['sponsoredJob'] == 2) {echo "Gnomes";} ?></p> 
+        <!-- <p>Sponsored Worker: <?php if($row['sponsoredJob'] == 1) {echo "Talon";} if($row['sponsoredJob'] == 2) {echo "Gnomes";} ?></p> --> 
         <p>Payment Type: <?php echo $row['paymentType'] ?></p> 
         <p>Payment Amount: <?php echo $row['paymentAmount'] ?></p> 
         <p>Posted At: <?php echo $row['crimeTime'] ?></p> 
