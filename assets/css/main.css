@@ -62,14 +62,11 @@ body .entries .entry .title {
   position: relative;
   color: #fff;
 }
-body .entries .entry .title .big .talon{
-  font-size: 32px;
-  margin-bottom: 12px;
-  position: relative;
-  -webkit-animation: bgcolor 20s infinite;
-    animation: bgcolor 10s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
+.talon {
+  -webkit-animation: bgcolor 20s infinite !important;
+  animation: bgcolor 10s infinite !important;
+  -webkit-animation-direction: alternate !important;
+  animation-direction: alternate !important;
 }
 body .entries .entry .title:before {
   content: '';
