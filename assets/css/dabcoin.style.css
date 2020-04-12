@@ -4785,12 +4785,12 @@ Vertical Timeline - by CodyHouse.co
 }
 
 @-webkit-keyframes Border {
-    0% {border-color: crimson;}
-    20% {border-color: orange;}
+    0% {border-color: gold;}
+    20% {border-color: white;}
     40% {border-color: goldenrod;}
-    60% {border-color: green;}
-    80% {border-color: DarkBlue;}
-    100% {border-color: purple}
+    60% {border-color: white;}
+    80% {border-color: gold;}
+    100% {border-color: white}
 }
 
 .cd-timeline__content.js-cd-content.sponsored {
