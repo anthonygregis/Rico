@@ -89,7 +89,25 @@ function time_elapsed_string($datetime, $full = false) {
             <input type="text" name="search" placeholder="Search.."> -->
         </div>
         <br>
-        <section class="cd-timeline js-cd-timeline">
+        <section id=timeline>
+	    <div class="demo-card-wrapper">
+        <?php $i = 1; foreach($tableArray as $row) {?>
+		    <div class="demo-card demo-card--step<?php echo $row['counter'] ?>">
+		    	<div class="head">
+		    		<div class="number-box">
+		    			<span><?php if($row['sponsoredJob'] == 1) : ?>Talon<?php endif; ?></span>
+		    		</div>
+		    		<h2><span class="small"><?php echo time_elapsed_string($row['crimeTime']) ?></span> <?php echo $row['crime'] ?></h2>
+		    	</div>
+		    	<div class="body">
+		    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+		    		<img src="http://placehold.it/1000x500" alt="Graphic">
+		    	</div>
+		    </div>
+        <?php } ?>
+	    </div>
+        </section>
+        <!-- <section class="cd-timeline js-cd-timeline">
             <div class="cd-timeline__container">
                 <?php $i = 1; foreach($tableArray as $row) {?>
                 <div class="cd-timeline__block js-cd-block">
@@ -105,7 +123,7 @@ function time_elapsed_string($datetime, $full = false) {
                 </div>
                 <?php } ?>
             </div>
-        </section>
+        </section> -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 		<script>
             var input = document.getElementById("referral");
