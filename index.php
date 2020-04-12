@@ -74,7 +74,7 @@ function time_elapsed_string($datetime, $full = false) {
     </body>
     <?php endif; ?>
     <!-- IF PERSON IS LOGGED IN IT DISPLAYS BELOW -->
-    <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) : ?>
+    <?php if((!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) && !isset($_GET["job"])) : ?>
     <body>
         <div class="header">
             <div class="glitch" data-text="RI₵O">RI₵O</div>
@@ -103,7 +103,6 @@ function time_elapsed_string($datetime, $full = false) {
                     </div>
                     </a>
                 </div>
-                
                 <?php } ?>
             </div>
         </section>
