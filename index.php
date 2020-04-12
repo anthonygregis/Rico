@@ -60,7 +60,7 @@ function time_elapsed_string($datetime, $full = false) {
   <div class="entries">
   <?php $i = 1; foreach($tableArray as $row) {?>
   <div class="entry">
-    <div class="title big <?php if($row['sponsoredJob'] == 1) { echo "talon"; } ?>"><?php if($row['sponsoredJob'] == 1) : ?><img width="15%" src="assets/img/talon1.png"/><?php endif; ?><?php echo $row['crime'] ?></div>
+    <div class="title big <?php if($row['sponsoredJob'] == 1) { echo "talon"; } ?>"><?php if($row['sponsoredJob'] == 1) : ?><img width="15%" src="assets/img/talon.png"/><?php endif; ?><?php echo $row['crime'] ?></div>
     <div class="body">
       <p><?php echo time_elapsed_string($row['crimeTime']) ?></strong></p>
     </div>
