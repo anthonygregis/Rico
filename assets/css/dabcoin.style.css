@@ -4872,6 +4872,7 @@ Vertical Timeline - by CodyHouse.co
     }
     .cd-timeline__block:nth-child(even) .cd-timeline__content.js-cd-content.sponsored::before {
         border-color: transparent;
+        border-left-color: transparent !important;
         border-right-color: #ffd700 !important;
     }
     .cd-timeline__read-more {
