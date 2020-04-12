@@ -112,7 +112,7 @@ function time_elapsed_string($datetime, $full = false) {
             input.addEventListener("keyup", function(event) {
               if (event.keyCode === 13) {
                event.preventDefault();
-               window.location.href = "http://nopixel.online/rico?loggedin=true";
+               window.location.href = "https://nopixel.online/rico?loggedin=true";
               }
             });
         </script>
@@ -122,7 +122,7 @@ function time_elapsed_string($datetime, $full = false) {
         <body>
         <div class="header">
             <div class="glitch" data-text="RI₵O">RI₵O</div>
-            <button class="styled" type="button">Return</button>
+            <button class="styled" type="submit" formaction="https://nopixel.online/rico/test/index.php">Return</button>
             <!-- <div class="styled-select slate">
                 <select onchange="window.location=this.value">
                     <option value="" disabled selected>Sort</option>
