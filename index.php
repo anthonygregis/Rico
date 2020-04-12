@@ -2,6 +2,10 @@
 // Initialize the session
 session_start();
 
+if(isset($_GET["loggedin"])) {
+  $loggedin = true;
+}
+
 if(isset($_GET["sort"])) { 
     $sort = $_GET["sort"];
 }
@@ -43,7 +47,6 @@ function time_elapsed_string($datetime, $full = false) {
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Droid+Sans'>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
