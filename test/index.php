@@ -88,6 +88,7 @@ require_once 'assets/php/time_elapsed.php'
   </section>
   <?php } ?>
 <script src="assets/js/index.js"></script>
+<script src="assets/js/strip.js"></script>
 </body>
 <?php endif; ?>
 </html>
