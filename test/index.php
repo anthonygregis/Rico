@@ -87,7 +87,7 @@ require_once 'assets/php/time_elapsed.php'
       <br>
   </section>
   <?php } ?>
-<script src="node_modules/fs"></script>
+<script src="node_modules/browserify-fs"></script>
 <script src="node_modules/path"></script>
 <script src="assets/js/index.js"></script>
 <script>
