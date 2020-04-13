@@ -83,7 +83,7 @@ require_once 'assets/php/time_elapsed.php'
         <p>Payment Type: <?php echo $row['paymentType'] ?></p> 
         <p>Payment Amount: <?php echo $row['paymentAmount'] ?></p> 
         <p>Posted At: <?php echo $row['crimeTime'] ?></p> 
-        <video width="20%"><source src="https://clips-media-assets2.twitch.tv/37511892544-offset-4776.mp4" type="video/mp4"></video>
+        <video width="20%" autoplay><source src="https://clips-media-assets2.twitch.tv/37511892544-offset-4776.mp4" type="video/mp4"></video>
       <br>
   </section>
   <?php } ?>
