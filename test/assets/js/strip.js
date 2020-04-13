@@ -1,3 +1,4 @@
+var fs = require('fs');
 var files = fs.readdirSync("https://clips.twitch.tv/TalentedDirtyPineappleKappa");
 var path = require('path');
 

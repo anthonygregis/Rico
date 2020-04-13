@@ -87,8 +87,18 @@ require_once 'assets/php/time_elapsed.php'
       <br>
   </section>
   <?php } ?>
+<script src="node_modules/fs"></script>
+<script src="node_modules/path"></script>
 <script src="assets/js/index.js"></script>
-<script src="assets/js/strip.js"></script>
+<script>
+  var files = fs.readdirSync("https://clips.twitch.tv/TalentedDirtyPineappleKappa");
+
+  for(var i in files) {
+   if(path.extname(files[i]) === ".mp4") {
+    console.log(i);
+   }
+  }
+</script>
 </body>
 <?php endif; ?>
 </html>
