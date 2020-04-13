@@ -127,7 +127,7 @@ body .entries .entry .title.big:before {
   -webkit-transform: translate(8px, -50%);
           transform: translate(8px, -50%);
 }
-body .entries .entry .title:after {
+/* body .entries .entry .title:after {
   content: '';
   position: absolute;
   width: 125%;
@@ -148,7 +148,7 @@ body .entries .entry:nth-child(2n) .title:after {
   right: 0%;
   transform: translate(6.7%, 16%);
   z-index: -1 !important;
-}
+} */
 body .entries .entry .body {
   color: #aaa;
 }
