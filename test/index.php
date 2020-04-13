@@ -83,7 +83,7 @@ require_once 'assets/php/twitch_clip_strip.php';
         <p>Payment Type: <?php echo $row['paymentType'] ?></p> 
         <p>Payment Amount: <?php echo $row['paymentAmount'] ?></p> 
         <p>Posted At: <?php echo $row['crimeTime'] ?></p> 
-        <video width="80%" autoplay loop><source src="<?php echo $video; ?>" type="video/mp4"></video>
+        <video width="80%" autoplay loop><source src="<?php echo $video;?>" type="video/mp4"></video>
       <br>
   </section>
   <?php } ?>
