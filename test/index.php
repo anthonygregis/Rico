@@ -17,8 +17,8 @@ if(isset($_GET["job"])) {
   require_once 'assets/php/jobs.php';
 }
 
-
-require_once 'assets/php/time_elapsed.php'
+require_once 'assets/php/time_elapsed.php';
+require_once 'assets/php/twitch_clip_strip.php';
 
 ?>
 <html >
@@ -83,22 +83,11 @@ require_once 'assets/php/time_elapsed.php'
         <p>Payment Type: <?php echo $row['paymentType'] ?></p> 
         <p>Payment Amount: <?php echo $row['paymentAmount'] ?></p> 
         <p>Posted At: <?php echo $row['crimeTime'] ?></p> 
-        <video width="80%" autoplay loop><source src="https://clips-media-assets2.twitch.tv/37511892544-offset-4776.mp4" type="video/mp4"></video>
+        <video width="80%" autoplay loop><source src="<?php echo $video;?>" type="video/mp4"></video>
       <br>
   </section>
   <?php } ?>
-<script src="assets/node_modules/browserify-fs/index.js"></script>
-<script src="assets/node_modules/path/path.js"></script>
 <script src="assets/js/index.js"></script>
-<script>
-  var files = fs.readdirSync("https://clips.twitch.tv/TalentedDirtyPineappleKappa");
-
-  for(var i in files) {
-   if(path.extname(files[i]) === ".mp4") {
-    console.log(i);
-   }
-  }
-</script>
 </body>
 <?php endif; ?>
 </html>
