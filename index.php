@@ -85,8 +85,10 @@ require_once 'assets/php/time_elapsed.php'
         <p>Payment Type: <?php echo $paymentType ?></p> 
         <p>Payment Amount: <?php echo $paymentAmount ?></p>
         <hr style="color:red;">
+        <h4 class="center">Current Claims</h4>
         <?php $i = 1; foreach($tableArray as $row) {?>
-          <p><?php echo $row['workerUuid'] ?></p>
+          <p>Worker UUID: <?php echo $row['workerUuid'] ?></p>
+          <p>Claimed At: <?php echo time_elapsed_string($row['claimTime']) ?></p>
         <?php } ?>
       </section>
     <?php endif; ?>

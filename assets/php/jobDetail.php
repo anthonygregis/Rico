@@ -49,6 +49,7 @@ $counter = 0;
 while ($row = mysqli_fetch_array($result))
 {
     $tableArray[$counter]['workerUuid'] = $row['workerUuid'];
+    $tableArray[$counter]['claimTime'] = $row['claimTime'];
     $counter++;
 }
 
