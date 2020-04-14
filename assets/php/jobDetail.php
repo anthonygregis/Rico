@@ -30,19 +30,6 @@ while ($row = mysqli_fetch_array($result))
      $counter++;
 }
 
-if(isset($job)) {
-    $query2 = "SELECT * FROM crimeClaims WHERE crimeUuid = '$job'";
-}
-
-$result = mysqli_query($link, $query2) or die(mysqli_error($link));
-$tableArray = array();
-$counter = 0;
-while ($row = mysqli_fetch_array($result))
-{
-     $tableArray[$counter]['workerClaims'] = $counter;
-     $counter++;
-}
-
 //Close Connection
 mysqli_close($link);
 ?>
