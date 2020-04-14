@@ -14,7 +14,6 @@ if(isset($job)) {
 }
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
-$tableArray = array();
 $counter = 0;
 while ($row = mysqli_fetch_array($result))
 {
@@ -29,6 +28,19 @@ while ($row = mysqli_fetch_array($result))
      $tableArray[$counter]['crimeTime'] = date('M d h:i A',strtotime($row['crimeTime']));
      $counter++;
 }
+
+if(isset($job)) {
+    $query2 = "SELECT * FROM crimeClaims WHERE crimeUuid = '$job'";
+}
+
+$result = mysqli_query($link, $query2) or die(mysqli_error($link));
+$counter = 0;
+while ($row = mysqli_fetch_array($result))
+{
+     $workerClaims = $counter;
+     $counter++;
+}
+
 
 //Close Connection
 mysqli_close($link);
