@@ -84,6 +84,7 @@ require_once 'assets/php/time_elapsed.php'
         <p>Current Claims: <?php echo $crimeClaims ?></p> 
         <p>Payment Type: <?php echo $paymentType ?></p> 
         <p>Payment Amount: <?php echo $paymentAmount ?></p>
+        <br>
         <hr style="border-color: inherit;">
         <h4 class="center">Current Claims</h4>
         <?php $i = 1; foreach($tableArray as $row) {?>
