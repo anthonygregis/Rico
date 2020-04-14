@@ -25,46 +25,14 @@ require_once 'assets/php/time_elapsed.php'
   <meta charset="UTF-8">
   <title>RI₵O</title>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Droid+Sans'>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<?php if(!isset($_GET["job"]) && !($_SESSION["loggedin"])) : ?>
-<body>
-    <div class="header">
-        <div class="glitch" data-text="RI₵O">RI₵O</div>
-    </div>
-    <section class="intro">
-            <p>Rico is designed to allow discreet contracts to be carried out between employers and workers. Designed to protect both parties and achieve maximum effeciency.
-                Employing a reputation system for both parties to ensure that you are rewarded for providing / completing contracts effectively.</p> 
-            <br>
-            <input type="text" id="referral" name="referral" placeholder="Enter Refferal Code..">
-    </section>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script>
-        var input = document.getElementById("referral");
-        input.addEventListener("keyup", function(event) {
-          if (event.keyCode === 13) {
-           event.preventDefault();
-           if (input.value == 'morbvpn') {
-           window.location.href = "http://nopixel.online/rico/test/";
-           }
-          }
-        });
-    </script>
-</body>
-<?php endif; ?>
 <?php if(!isset($_GET["job"]) && ($_SESSION["loggedin"])) : ?>
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
-    <!-- <div class="styled-select slate">
-        <select onchange="window.location=this.value">
-            <option value="" disabled selected>Sort</option>
-            <option value="?sort=time">Time</option>
-            <option value="?sort=value">Value</option>
-            <option value="?sort=rep">Seller Rep</option>
-        </select>
-    </div>
-    <input type="text" name="search" placeholder="Search.."> -->
+    <a href="?login"><i class="fas fa-sign-in-alt"></i></a>
   </div>
   <div class="entries">
   <?php $i = 1; foreach($tableArray as $row) {?>
