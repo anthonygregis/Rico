@@ -36,7 +36,7 @@ require_once 'assets/php/time_elapsed.php'
 
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
-    <a style="background:white;" href="?login"><i class="fas fa-sign-in-alt"></i></a>
+    <a style="colore:red;" href="?login"><i class="fas fa-sign-in-alt"></i></a>
   </div>
 
   <div class="entries">
