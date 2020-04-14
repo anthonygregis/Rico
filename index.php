@@ -13,7 +13,6 @@ if(isset($_GET["sort"])) {
 if(isset($_GET["job"])) { 
   $job = $_GET["job"];
   require_once 'assets/php/jobDetail.php';
-  require_once 'assets/php/jobClaims.php';
 } else {
   require_once 'assets/php/jobs.php';
 }

@@ -167,9 +167,6 @@ body .entries .entry:nth-child(2n) .title.big:before {
   -webkit-transform: translate(-8px, -50%);
           transform: translate(-8px, -50%);
 }
-.centered {
-  text-align: center;
-}
 .header {
     height: 25%;
     margin: 0 auto;
@@ -406,6 +403,9 @@ body .entries .entry:nth-child(2n) .title.big:before {
     padding: 30px;
     text-align: left;
     width: 65%;
+  }
+  .jobDetails .center {
+    text-align: center;
   }
   a {
     text-decoration: none;
