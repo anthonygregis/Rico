@@ -25,15 +25,20 @@ require_once 'assets/php/time_elapsed.php'
   <meta charset="UTF-8">
   <title>RI₵O</title>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Droid+Sans'>
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/7d71860d85.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
+<!-- JOB BOARD -->
+
 <?php if(!isset($_GET["job"])) : ?>
 <body>
+
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
-    <a href="?login"><i class="fas fa-sign-in-alt"></i></a>
+    <a style="background:white;" href="?login"><i class="fas fa-sign-in-alt"></i></a>
   </div>
+
   <div class="entries">
   <?php $i = 1; foreach($tableArray as $row) {?>
       <div class="entry">
@@ -45,10 +50,15 @@ require_once 'assets/php/time_elapsed.php'
         </a>
       </div>
   <?php } ?>
-</div>
+  </div>
+
 <script src="assets/js/index.js"></script>
+
 </body>
 <?php endif; ?>
+
+<!-- JOB DETAILS -->
+
 <?php if(isset($job)) : ?>
 <body>
   <div class="header">
@@ -81,4 +91,5 @@ require_once 'assets/php/time_elapsed.php'
 <script src="assets/js/index.js"></script>
 </body>
 <?php endif; ?>
+
 </html>
