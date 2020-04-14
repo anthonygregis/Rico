@@ -84,7 +84,10 @@ require_once 'assets/php/time_elapsed.php'
         <p>Current Claims: <?php echo $crimeClaims ?></p> 
         <p>Payment Type: <?php echo $paymentType ?></p> 
         <p>Payment Amount: <?php echo $paymentAmount ?></p>
-        <hr>
+        <hr style="color:red;">
+        <?php $i = 1; foreach($tableArray as $row) {?>
+          <p><?php echo $row['workerUuid'] ?></p>
+        <?php } ?>
       </section>
     <?php endif; ?>
 <script src="assets/js/index.js"></script>

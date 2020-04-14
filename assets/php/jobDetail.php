@@ -39,6 +39,18 @@ while ($row = mysqli_fetch_array($result))
      $counter++;
 }
 
+if(isset($job)) {
+    $query3 = "SELECT * FROM crimeClaims WHERE crimeUuid = '$job'";
+}
+
+$result = mysqli_query($link, $query3) or die(mysqli_error($link));
+$tableArray = array();
+$counter = 0;
+while ($row = mysqli_fetch_array($result))
+{
+    $tableArray[$counter]['workerUuid'] = $row['workerUuid'];
+    $counter++;
+}
 
 //Close Connection
 mysqli_close($link);
