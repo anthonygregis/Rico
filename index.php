@@ -28,7 +28,7 @@ require_once 'assets/php/time_elapsed.php'
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<?php if(!isset($_GET["job"]) && ($_SESSION["loggedin"])) : ?>
+<?php if(!isset($_GET["job"])) : ?>
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
