@@ -20,7 +20,6 @@ $tableArray = array();
 $counter = 0;
 while ($row = mysqli_fetch_array($result))
 {
-     $tableArray[$counter]['counter'] = $counter;
      $tableArray[$counter]['crime'] = $row['crime'];
      $tableArray[$counter]['crimeUuid'] = $row['crimeUuid'];
      $tableArray[$counter]['sponsoredJob'] = $row['sponsoredJob'];

@@ -74,20 +74,19 @@ require_once 'assets/php/time_elapsed.php'
     </div>
     <input type="text" name="search" placeholder="Search.."> -->
   </div>
-  <?php $i = 1; foreach($tableArray as $row) {?>
-    <?php if ($row["sellerUuid"] == $row["sellerUuid"]) : ?>
+    <?php if ($sellerUuid == $sellerUuid) : ?>
       <section class="jobDetails">
-        <h1 class="center"><?php echo $row['crime'] ?></h1>
-        <h4 class="center">Posted: <?php echo time_elapsed_string($row['crimeTime']) ?></h4> 
-        <p>Job UUID: <?php echo $row['crimeUuid'] ?></p> 
-        <p>Job Description: <?php echo $row['crimeDescription'] ?></p> 
-        <p>Worker Limit: <?php echo $row['workerLimit'] ?></p>
-        <p>Current Claims: <?php echo $workerClaims ?></p> 
-        <p>Payment Type: <?php echo $row['paymentType'] ?></p> 
-        <p>Payment Amount: <?php echo $row['paymentAmount'] ?></p> 
+        <h1 class="center"><?php echo $crime ?></h1>
+        <h4 class="center">Posted: <?php echo time_elapsed_string($crimeTime) ?></h4> 
+        <p>Job UUID: <?php echo $crimeUuid ?></p> 
+        <p>Job Description: <?php echo $crimeDescription ?></p> 
+        <p>Worker Limit: <?php echo $crimeLimit ?></p>
+        <p>Current Claims: <?php echo $crimeClaims ?></p> 
+        <p>Payment Type: <?php echo $paymentType ?></p> 
+        <p>Payment Amount: <?php echo $paymentAmount ?></p>
+        <hr>
       </section>
     <?php endif; ?>
-  <?php } ?>
 <script src="assets/js/index.js"></script>
 </body>
 <?php endif; ?>
