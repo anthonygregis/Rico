@@ -402,6 +402,14 @@ body .entries .entry:nth-child(2n) .title.big:before {
   .intro input[type=text]::placeholder {
       color: red;
   }
+  .jobDetails {
+    margin: auto;
+    color: red;
+    border: 1px solid red;
+    padding: 30px;
+    text-align: center;
+    width: 65%;
+  }
   a {
     text-decoration: none;
   }

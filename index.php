@@ -17,7 +17,6 @@ if(isset($_GET["job"])) {
   require_once 'assets/php/jobs.php';
 }
 
-
 require_once 'assets/php/time_elapsed.php'
 
 ?>
@@ -28,7 +27,32 @@ require_once 'assets/php/time_elapsed.php'
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Droid+Sans'>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<?php if(!isset($_GET["job"])) : ?>
+<?php if(!isset($_GET["job"]) && !($_SESSION["loggedin"])) : ?>
+<body>
+    <div class="header">
+        <div class="glitch" data-text="RI₵O">RI₵O</div>
+    </div>
+    <section class="intro">
+            <p>Rico is designed to allow discreet contracts to be carried out between employers and workers. Designed to protect both parties and achieve maximum effeciency.
+                Employing a reputation system for both parties to ensure that you are rewarded for providing / completing contracts effectively.</p> 
+            <br>
+            <input type="text" id="referral" name="referral" placeholder="Enter Refferal Code..">
+    </section>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+        var input = document.getElementById("referral");
+        input.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+           event.preventDefault();
+           if (input.value == 'morbvpn') {
+           window.location.href = "http://nopixel.online/rico/test/";
+           }
+          }
+        });
+    </script>
+</body>
+<?php endif; ?>
+<?php if(!isset($_GET["job"]) && ($_SESSION["loggedin"])) : ?>
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
@@ -73,7 +97,7 @@ require_once 'assets/php/time_elapsed.php'
     <input type="text" name="search" placeholder="Search.."> -->
   </div>
   <?php $i = 1; foreach($tableArray as $row) {?>
-  <section class="intro">
+  <section class="jobDetails">
         <p>-- Retrieved Job Information --</p>
         <p>Job Type: <?php echo $row['crime'] ?></p>
         <p>Job UUID: <?php echo $row['crimeUuid'] ?></p> 
