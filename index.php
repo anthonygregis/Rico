@@ -88,7 +88,7 @@ require_once 'assets/php/time_elapsed.php'
         <hr style="border-color: inherit;">
         <h4 class="center">Current Claims</h4>
         <?php $i = 1; foreach($tableArray as $row) {?>
-          <p>Worker UUID: <?php echo $row['workerUuid'] ?> Claimed At: <?php echo time_elapsed_string($row['claimTime']) ?> <button>Award Claim</button><button>Report Worker</button></p>
+          <p>Worker UUID: <?php echo $row['workerUuid'] ?> Claimed At: <?php echo time_elapsed_string($row['claimTime']) ?> <button class="action">Award Claim</button><button class="action">Report Worker</button></p>
         <?php } ?>
         <br>
       </section>

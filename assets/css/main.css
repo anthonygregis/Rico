@@ -417,7 +417,7 @@ body .entries .entry:nth-child(2n) .title.big:before {
   .jobDetails .center {
     text-align: center;
   }
-  .jobDetails > button {
+  .jobDetails .action {
     background-color: transparent;
     border: 1px solid red;
     color: white;
