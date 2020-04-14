@@ -91,8 +91,6 @@ require_once 'assets/php/time_elapsed.php'
           <p>Worker UUID: <?php echo $row['workerUuid'] ?> Claimed At: <?php echo time_elapsed_string($row['claimTime']) ?> <button>Award Claim</button><button>Report Worker</button></p>
         <?php } ?>
         <br>
-        <hr style="border-color: inherit;">
-        <h4 class="center">Actions</h4>
       </section>
     <?php endif; ?>
 <script src="assets/js/index.js"></script>
