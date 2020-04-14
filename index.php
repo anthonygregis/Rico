@@ -75,18 +75,18 @@ require_once 'assets/php/time_elapsed.php'
     <input type="text" name="search" placeholder="Search.."> -->
   </div>
   <?php $i = 1; foreach($tableArray as $row) {?>
-  <section class="jobDetails">
-        <p>-- Retrieved Job Information --</p>
-        <p>Job Type: <?php echo $row['crime'] ?></p>
+    <?php if ($row["sellerUuid"] == $row["sellerUuid"]) : ?>
+      <section class="jobDetails">
+        <h1 class="centered"><?php echo $row['crime'] ?></h1>
+        <h4 class="centered">Posted: <?php echo time_elapsed_string($row['crimeTime']) ?></h4> 
         <p>Job UUID: <?php echo $row['crimeUuid'] ?></p> 
         <p>Job Description: <?php echo $row['crimeDescription'] ?></p> 
-        <p>Worker Limit: <?php echo $row['workerLimit'] ?></p> 
-        <!-- <p>Sponsored Worker: <?php if($row['sponsoredJob'] == 1) {echo "Talon";} if($row['sponsoredJob'] == 2) {echo "Gnomes";} ?></p> --> 
+        <p>Worker Limit: <?php echo $row['workerLimit'] ?></p>
+        <p>Current Claims: <?php echo $row['workerClaims'] ?></p> 
         <p>Payment Type: <?php echo $row['paymentType'] ?></p> 
         <p>Payment Amount: <?php echo $row['paymentAmount'] ?></p> 
-        <p>Posted At: <?php echo $row['crimeTime'] ?></p> 
-      <br>
-  </section>
+      </section>
+    <?php endif; ?>
   <?php } ?>
 <script src="assets/js/index.js"></script>
 </body>

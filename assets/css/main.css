@@ -167,6 +167,9 @@ body .entries .entry:nth-child(2n) .title.big:before {
   -webkit-transform: translate(-8px, -50%);
           transform: translate(-8px, -50%);
 }
+.centered {
+  text-align: center;
+}
 .header {
     height: 25%;
     margin: 0 auto;
