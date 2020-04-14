@@ -404,7 +404,7 @@ body .entries .entry:nth-child(2n) .title.big:before {
     color: red;
     border: 1px solid red;
     padding: 30px;
-    text-align: center;
+    text-align: left;
     width: 65%;
   }
   a {

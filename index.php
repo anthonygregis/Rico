@@ -13,6 +13,7 @@ if(isset($_GET["sort"])) {
 if(isset($_GET["job"])) { 
   $job = $_GET["job"];
   require_once 'assets/php/jobDetail.php';
+  require_once 'assets/php/jobClaims.php';
 } else {
   require_once 'assets/php/jobs.php';
 }
@@ -77,8 +78,8 @@ require_once 'assets/php/time_elapsed.php'
   <?php $i = 1; foreach($tableArray as $row) {?>
     <?php if ($row["sellerUuid"] == $row["sellerUuid"]) : ?>
       <section class="jobDetails">
-        <h1 class="centered"><?php echo $row['crime'] ?></h1>
-        <h4 class="centered">Posted: <?php echo time_elapsed_string($row['crimeTime']) ?></h4> 
+        <h1 class="center"><?php echo $row['crime'] ?></h1>
+        <h4 class="center">Posted: <?php echo time_elapsed_string($row['crimeTime']) ?></h4> 
         <p>Job UUID: <?php echo $row['crimeUuid'] ?></p> 
         <p>Job Description: <?php echo $row['crimeDescription'] ?></p> 
         <p>Worker Limit: <?php echo $row['workerLimit'] ?></p>
