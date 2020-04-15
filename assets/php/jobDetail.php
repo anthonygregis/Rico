@@ -32,6 +32,7 @@ if(isset($job)) {
 }
 
 $result = mysqli_query($link, $query2) or die(mysqli_error($link));
+$crimeClaims = 0;
 $counter = 1;
 while ($row = mysqli_fetch_array($result))
 {

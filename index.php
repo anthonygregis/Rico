@@ -13,6 +13,7 @@ if(isset($_GET["sort"])) {
 if(isset($_GET["job"])) { 
   $job = $_GET["job"];
   require_once 'assets/php/jobDetail.php';
+  require_once 'assets/php/recursive_in_array.php';
 } else {
   require_once 'assets/php/jobs.php';
 }
@@ -63,7 +64,7 @@ require_once 'assets/php/time_elapsed.php'
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
-    <input type="button" value="Return" onclick="window.location.href = 'https://nopixel.online/rico/test/index.php';">
+    <input type="button" value="Return" onclick="window.location.href = '/';">
     <!-- <div class="styled-select slate">
         <select onchange="window.location=this.value">
             <option value="" disabled selected>Sort</option>
@@ -74,7 +75,7 @@ require_once 'assets/php/time_elapsed.php'
     </div>
     <input type="text" name="search" placeholder="Search.."> -->
   </div>
-    <?php if ($sellerUuid == $sellerUuid) : ?>
+    <?php if ($sellerUuid == $_SESSION['userUuid']) : ?>
       <section class="jobDetails">
         <h1 class="center"><?php echo $crime ?></h1>
         <h4 class="center">Posted: <?php echo time_elapsed_string($crimeTime) ?></h4> 
@@ -92,8 +93,22 @@ require_once 'assets/php/time_elapsed.php'
           <p>Claimed At: <?php echo time_elapsed_string($row['claimTime']) ?></p>
           <p><button class="action">Award Claim</button><button class="action">Report Worker</button></p>
         <?php } ?>
-        <br>
       </section>
+    <?php endif; ?>
+    <?php if (($sellerUuid !== $_SESSION['userUuid']) && ($crimeClaims < $crimeLimit) && (!in_array_r($_SESSION['userUuid'], $tableArray))) : ?>
+      <section class="jobDetails">
+        <h1 class="center"><?php echo $crime ?></h1>
+        <h4 class="center">Posted: <?php echo time_elapsed_string($crimeTime) ?></h4> 
+        <p>Job UUID: <?php echo $crimeUuid ?></p> 
+        <p>Job Description: <?php echo $crimeDescription ?></p> 
+        <p>Worker Limit: <?php echo $crimeLimit ?></p>
+        <p>Current Claims: <?php echo $crimeClaims ?></p> 
+        <p>Payment Type: <?php echo $paymentType ?></p> 
+        <p>Payment Amount: <?php echo $paymentAmount ?></p>
+        <center>
+          <button class="action">Claim Job</button>
+        </center>
+        </section>
     <?php endif; ?>
 <script src="assets/js/index.js"></script>
 </body>
