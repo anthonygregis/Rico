@@ -51,7 +51,18 @@
     color: white;
   }
 }
-
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
 body {
   background-color: black;
   min-height: 100vh;
@@ -388,19 +399,28 @@ body .entries .entry:nth-child(2n) .title.big:before {
     transition: width 0.4s ease-in-out;
   }
 
-  
-  /* When the input field gets focus, change its width to 100% */
-  .intro input[type=text]:focus {
-    width: 65%;
-    outline-width: 0;
-  }
-
   .intro input[type=text]:focus::placeholder {
     color: transparent;
   }
 
   .intro input[type=text]::placeholder {
       color: red;
+  }
+  .jobDetails {
+    margin: auto;
+    color: red;
+    border: 1px solid red;
+    padding: 30px;
+    text-align: left;
+    width: 65%;
+  }
+  .jobDetails .center {
+    text-align: center;
+  }
+  .jobDetails .action {
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
   }
   a {
     text-decoration: none;

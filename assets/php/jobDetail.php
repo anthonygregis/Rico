@@ -14,20 +14,44 @@ if(isset($job)) {
 }
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
+while ($row = mysqli_fetch_array($result))
+{
+     $crime = $row['crime'];
+     $crimeUuid = $row['crimeUuid'];
+     $crimeDescription = $row['crimeDescription'];
+     $crimeLimit = $row['workerLimit'];
+     $crimeSponsored = $row['sponsoredJob'];
+     $crimeTime = date('M d h:i A',strtotime($row['crimeTime']));
+     $paymentType = $row['paymentType'];
+	 $paymentAmount = $row['paymentAmount'];
+     $sellerUuid = $row['sellerUuid'];
+}
+
+if(isset($job)) {
+    $query2 = "SELECT * FROM crimeClaims WHERE crimeUuid = '$job'";
+}
+
+$result = mysqli_query($link, $query2) or die(mysqli_error($link));
+$crimeClaims = 0;
+$counter = 1;
+while ($row = mysqli_fetch_array($result))
+{
+     $crimeClaims = $counter;
+     $counter++;
+}
+
+if(isset($job)) {
+    $query3 = "SELECT * FROM crimeClaims WHERE crimeUuid = '$job'";
+}
+
+$result = mysqli_query($link, $query3) or die(mysqli_error($link));
 $tableArray = array();
 $counter = 0;
 while ($row = mysqli_fetch_array($result))
 {
-     $tableArray[$counter]['counter'] = $counter;
-     $tableArray[$counter]['crime'] = $row['crime'];
-     $tableArray[$counter]['crimeUuid'] = $row['crimeUuid'];
-     $tableArray[$counter]['crimeDescription'] = $row['crimeDescription'];
-     $tableArray[$counter]['workerLimit'] = $row['workerLimit'];
-     $tableArray[$counter]['sponsoredJob'] = $row['sponsoredJob'];
-     $tableArray[$counter]['paymentType'] = $row['paymentType'];
-	 $tableArray[$counter]['paymentAmount'] = $row['paymentAmount'];
-     $tableArray[$counter]['crimeTime'] = date('M d h:i A',strtotime($row['crimeTime']));
-     $counter++;
+    $tableArray[$counter]['workerUuid'] = $row['workerUuid'];
+    $tableArray[$counter]['claimTime'] = $row['claimTime'];
+    $counter++;
 }
 
 //Close Connection
