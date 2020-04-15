@@ -32,7 +32,7 @@ require_once 'assets/php/time_elapsed.php'
 
 <!-- JOB BOARD -->
 
-<?php if(!isset($_GET["job"])) : ?>
+<?php if(empty($_GET)) : ?>
 <body>
 
   <div class="header">
@@ -58,13 +58,63 @@ require_once 'assets/php/time_elapsed.php'
 </body>
 <?php endif; ?>
 
+<!-- LOGIN -->
+
+<?php if(isset($_GET["login"])) : ?>
+<body>
+
+  <div class="header">
+    <div class="glitch" data-text="RI₵O">RI₵O</div>
+    <input type="button" value="Register" onclick="location.href='?register';">
+    <input type="button" value="Return" onclick="location.href='<?php echo $_SERVER[PHP_SELF]; ?>';">
+  </div>
+  
+  <div id="login">
+    <form class="login" action="index.html" method="post">
+      <h1>Login</h1>
+      <input type="text" name="" placeholder="Identifier">
+      <input type="password" name="" placeholder="Password">
+      <input type="submit" name="" value="Login">
+    </form>
+  </div>
+
+<script src="assets/js/index.js"></script>
+
+</body>
+<?php endif; ?>
+
+<!-- REGISTER -->
+
+<?php if(isset($_GET["register"])) : ?>
+<body>
+
+  <div class="header">
+    <div class="glitch" data-text="RI₵O">RI₵O</div>
+    <input type="button" value="Login" onclick="location.href='?login';">
+    <input type="button" value="Return" onclick="location.href='<?php echo $_SERVER[PHP_SELF]; ?>';">
+  </div>
+  
+  <div id="login">
+    <form class="login" action="index.html" method="post">
+      <h1>Register</h1>
+      <input type="text" name="" placeholder="Identifier">
+      <input type="password" name="" placeholder="Password">
+      <input type="submit" name="" value="Register">
+    </form>
+  </div>
+
+<script src="assets/js/index.js"></script>
+
+</body>
+<?php endif; ?>
+
 <!-- JOB DETAILS -->
 
 <?php if(isset($job)) : ?>
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
-    <input type="button" value="Return" onclick="window.location.href = 'https://nopixel.online/rico/test/index.php';">
+    <input type="button" value="Return" onclick="history.back()">
     <!-- <div class="styled-select slate">
         <select onchange="window.location=this.value">
             <option value="" disabled selected>Sort</option>

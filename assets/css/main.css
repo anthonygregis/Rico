@@ -425,3 +425,53 @@ body .entries .entry:nth-child(2n) .title.big:before {
   a {
     text-decoration: none;
   }
+  .login {
+    margin-top: 8%;
+    margin-bottom: -8%;
+    width: 300px;
+    padding: 40px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    text-align: center;
+  }
+  .login h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .login input[type = "text"],.login input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid red;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+  }
+  .login input[type = "text"]:focus,.login input[type = "password"]:focus{
+    width: 280px;
+    border-color: red;
+  }
+  .login input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid red;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .login input[type = "submit"]:hover{
+    background: red;
+  }
