@@ -64,7 +64,7 @@ require_once 'assets/php/time_elapsed.php'
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
-    <input type="button" value="Return" onclick="window.location.href = '/';">
+    <input type="button" value="Return" onclick="window.location.href = 'https://nopixel.online/rico/test/index.php';">
     <!-- <div class="styled-select slate">
         <select onchange="window.location=this.value">
             <option value="" disabled selected>Sort</option>
