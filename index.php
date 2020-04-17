@@ -47,7 +47,7 @@ require_once 'assets/php/time_elapsed.php'
 
 <!-- JOB BOARD -->
 
-<?php if(empty($_GET) && (!$loggedin)) : ?>
+<?php if(empty($_GET) && ($loggedin)) : ?>
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
