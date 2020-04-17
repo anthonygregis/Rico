@@ -27,31 +27,27 @@ while ($row = mysqli_fetch_array($result))
      $sellerUuid = $row['sellerUuid'];
 }
 
-if(isset($job)) {
+if(isset($job) || isset($jobClaim)) {
     $query2 = "SELECT * FROM crimeClaims WHERE crimeUuid = '$job'";
-}
+    $result = mysqli_query($link, $query2) or die(mysqli_error($link));
+    $crimeClaims = 0;
+    $counter = 1;
+    while ($row = mysqli_fetch_array($result))
+    {
+        $crimeClaims = $counter;
+        $counter++;
+    }
 
-$result = mysqli_query($link, $query2) or die(mysqli_error($link));
-$crimeClaims = 0;
-$counter = 1;
-while ($row = mysqli_fetch_array($result))
-{
-     $crimeClaims = $counter;
-     $counter++;
-}
-
-if(isset($job)) {
     $query3 = "SELECT * FROM crimeClaims WHERE crimeUuid = '$job'";
-}
-
-$result = mysqli_query($link, $query3) or die(mysqli_error($link));
-$tableArray = array();
-$counter = 0;
-while ($row = mysqli_fetch_array($result))
-{
-    $tableArray[$counter]['workerUuid'] = $row['workerUuid'];
-    $tableArray[$counter]['claimTime'] = $row['claimTime'];
-    $counter++;
+    $result = mysqli_query($link, $query3) or die(mysqli_error($link));
+    $tableArray = array();
+    $counter = 0;
+    while ($row = mysqli_fetch_array($result))
+    {
+        $tableArray[$counter]['workerUuid'] = $row['workerUuid'];
+        $tableArray[$counter]['claimTime'] = $row['claimTime'];
+        $counter++;
+    }
 }
 
 //Close Connection
