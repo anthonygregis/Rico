@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
 
-require_once __DIR__.'/../../darkweb/tracker.php';
+require_once __DIR__.'/../darkweb/tracker.php';
 
 $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
