@@ -47,11 +47,7 @@ require_once 'assets/php/time_elapsed.php'
 
 <!-- JOB BOARD -->
 
-<<<<<<< Updated upstream
-<?php if(!isset($_GET["job"])) : ?>
-=======
 <?php if(empty($_GET) && (!$loggedin)) : ?>
->>>>>>> Stashed changes
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
@@ -70,12 +66,6 @@ require_once 'assets/php/time_elapsed.php'
       </div>
   <?php } ?>
   </div>
-<<<<<<< Updated upstream
-
-<script src="assets/js/index.js"></script>
-
-=======
->>>>>>> Stashed changes
 </body>
 <?php endif; ?>
 
@@ -85,20 +75,7 @@ require_once 'assets/php/time_elapsed.php'
 <body>
   <div class="header">
     <div class="glitch" data-text="RI₵O">RI₵O</div>
-<<<<<<< Updated upstream
-    <input type="button" value="Return" onclick="window.location.href = 'https://nopixel.online/rico/test/index.php';">
-    <!-- <div class="styled-select slate">
-        <select onchange="window.location=this.value">
-            <option value="" disabled selected>Sort</option>
-            <option value="?sort=time">Time</option>
-            <option value="?sort=value">Value</option>
-            <option value="?sort=rep">Seller Rep</option>
-        </select>
-    </div>
-    <input type="text" name="search" placeholder="Search.."> -->
-=======
     <input type="button" value="Return" onclick="location.href='<?php echo $_SERVER[PHP_SELF]; ?>';">
->>>>>>> Stashed changes
   </div>
     <?php if (($sellerUuid == $_SESSION['userUuid'])) : ?>
       <section class="jobDetails">
