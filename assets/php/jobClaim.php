@@ -10,11 +10,11 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$query = "INSERT INTO crimeClaims (crimeUuid, workerUuid) VALUES (?, ?)";
+$query = "INSERT INTO crimeClaims (crimeUuid, workerUuid, workerIdentifier) VALUES (?, ?, ?)";
 
 if($stmt = mysqli_prepare($link, $query)){
     // Bind variables to the prepared statement as parameters
-    mysqli_stmt_bind_param($stmt, "ss", $crimeUuid, $userUuid);
+    mysqli_stmt_bind_param($stmt, "sss", $crimeUuid, $userUuid, $userIdentifier);
 
     // Attempt to execute the prepared statement
     if(mysqli_stmt_execute($stmt)){

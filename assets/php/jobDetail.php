@@ -19,6 +19,7 @@ while ($row = mysqli_fetch_array($result))
      $crime = $row['crime'];
      $crimeUuid = $row['crimeUuid'];
      $crimeDescription = $row['crimeDescription'];
+     $crimeUrl = $row['crimeUrl'];
      $crimeLimit = $row['workerLimit'];
      $crimeSponsored = $row['sponsoredJob'];
      $crimeTime = date('M d h:i A',strtotime($row['crimeTime']));
@@ -44,8 +45,13 @@ if(isset($job) || isset($jobClaim)) {
     $counter = 0;
     while ($row = mysqli_fetch_array($result))
     {
+        $tableArray[$counter]['crimeUuid'] = $row['crimeUuid'];
         $tableArray[$counter]['workerUuid'] = $row['workerUuid'];
+        $tableArray[$counter]['workerIdentifier'] = $row['workerIdentifier'];
+        $tableArray[$counter]['crimeCompleted'] = $row['crimeCompleted'];
+        $tableArray[$counter]['crimeProof'] = $row['crimeProof'];
         $tableArray[$counter]['claimTime'] = $row['claimTime'];
+        $tableArray[$counter]['workerPaypal'] = $row['workerPaypal'];
         $counter++;
     }
 }

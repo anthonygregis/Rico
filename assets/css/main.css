@@ -332,9 +332,7 @@ body .entries .entry:nth-child(2n) .title.big:before {
     background-color: black;
     color: red;
     border: 1px solid red;
-    height: 5%;
     overflow: hidden;
-    width: 55px;
  }
  
  .styled-select select {
@@ -352,8 +350,6 @@ body .entries .entry:nth-child(2n) .title.big:before {
     border: 1px solid red;
     background-color: black;
     color: red;
-    height: 5%;
-    width: 130px;
     text-align: center;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
@@ -392,8 +388,6 @@ body .entries .entry:nth-child(2n) .title.big:before {
     border: 1px solid red;
     background-color: black;
     color: red;
-    height: 29px;
-    width: 45%;
     text-align: center;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
@@ -413,6 +407,7 @@ body .entries .entry:nth-child(2n) .title.big:before {
     padding: 30px;
     text-align: left;
     width: 65%;
+    position: relative;
   }
   .jobDetails .center {
     text-align: center;
@@ -422,6 +417,109 @@ body .entries .entry:nth-child(2n) .title.big:before {
     border: 1px solid red;
     color: red;
   }
+  .jobDetails .description{
+    margin-bottom: 5%;
+  }
+  .jobDetails .inline {
+    display: inline;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .jobDetails .inline-spaced {
+    display: inline;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .jobDetails .inline-last {
+    display: inline;
+    text-align: right;
+    margin-left: 8%;
+  }
+  .jobCreate {
+    margin: auto;
+    color: red;
+    border: 1px solid red;
+    padding: 30px;
+    text-align: left;
+    width: 35%;
+  }
+  .jobCreate .center {
+    text-align: center;
+  }
+  .jobCreate .action {
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+  }
+  form > input, textarea {
+    background: transparent;
+    color: red;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid red;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  form > input::placeholder, form > textarea::placeholder {
+    color: red;
+  }
+  form > input[type=submit] {
+    width: 20%;
+    background-color: transparent;
+    color: red;
+    padding: 14px 20px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 1px solid red;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  form > input[type=submit]:hover {
+    background-color: red;
+    color: black;
+  }
+  .jobDetails form > input, textarea {
+    background: transparent;
+    color: red;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid red;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .jobDetails form > input::placeholder, form > textarea::placeholder {
+    color: red;
+  }
+  .jobDetails form > input[type=submit] {
+    background-color: transparent;
+    color: red;
+    padding: 14px 20px;
+    width: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 1px solid red;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .jobDetails form > input[type=submit]:hover {
+    background-color: red;
+    color: black;
+  }
   a {
     text-decoration: none;
+  }
+  .chat {
+    margin: auto;
+    color: red;
+    border: 1px solid red;
+    padding: 30px;
+    text-align: left;
+    width: 65%;
+    position: relative;
   }

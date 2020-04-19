@@ -10,9 +10,9 @@ if($link === false){
 }
 
 if(!isset($sort) || $sort == "time") {
-    $query = "SELECT * FROM crimes ORDER BY sponsoredJob DESC, crimeTime DESC";
+    $query = "SELECT * FROM crimes WHERE crimeCompleted = 0 ORDER BY sponsoredJob DESC, crimeTime DESC";
 } else if($sort == "value") {
-    $query = "SELECT * FROM crimes ORDER BY sponsoredJob DESC, paymentAmount DESC";
+    $query = "SELECT * FROM crimes WHERE crimeCompleted = 0 ORDER BY sponsoredJob DESC, paymentAmount DESC";
 }
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
