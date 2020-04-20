@@ -178,7 +178,7 @@ body .entries .entry:nth-child(2n) .title.big:before {
           transform: translate(-8px, -50%);
 }
 .header {
-    height: 25%;
+    height: 30%;
     margin: 0 auto;
     text-align: center;
     position: relative;
