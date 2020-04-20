@@ -17,7 +17,7 @@ require_once 'assets/php/time_elapsed.php';
 </head>
 
 <!-- JOB BOARD -->
-
+<?php if($loggedin) : ?>
 <?php if(empty($_GET) && ($loggedin)) : ?>
 <body>
   <div class="header">
@@ -179,5 +179,5 @@ require_once 'assets/php/time_elapsed.php';
       </section>
 </body>
 <?php endif; ?>
-
+<?php endif; ?>
 </html>
