@@ -18,7 +18,7 @@ if($stmt = mysqli_prepare($link, $query)){
 
     // Attempt to execute the prepared statement
     if(mysqli_stmt_execute($stmt)){
-        header('Location: https://nopixel.online/rico/');
+        
     } else {
         echo "Error: 0x001 | Refresh browser and report bug in chatters anonymous";
     }
@@ -66,7 +66,7 @@ if($stmt = mysqli_prepare($link, $query)){
 
     // Attempt to execute the prepared statement
     if(mysqli_stmt_execute($stmt)){
-        
+        header('Location: https://nopixel.online/rico/');
     } else {
         echo "Error: 0x001 | Refresh browser and report bug in chatters anonymous";
     }
