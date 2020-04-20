@@ -119,7 +119,7 @@ require_once 'assets/php/time_elapsed.php';
           <p>Worker UUID: <?php echo $row['workerUuid'] ?></p>
           <p>Worker Identifier: <?php echo $row['workerIdentifier'] ?>
           <p>Claimed At: <?php echo time_elapsed_string($row['claimTime']) ?></p>
-          <p>Worker Proof: </p><img src="<?php echo $row['crimeProof'] ?>">
+          <p>Worker Proof: </p><img width="30%" src="<?php echo $row['crimeProof'] ?>">
           <p><button class="action" onclick="location.href='?job=<?php echo $crimeUuid; ?>&awardWorker=<?php echo $row['workerUuid'] ?>';">Award Claim</button>
              <button class="action" onclick="location.href='?job=<?php echo $crimeUuid; ?>&reportWorker=<?php echo $row['workerUuid'] ?>';">Report Worker</button></p>
         <?php } ?>
@@ -146,7 +146,7 @@ require_once 'assets/php/time_elapsed.php';
         <p>Worker UUID: <?php echo $row['workerUuid'] ?></p>
         <p>Worker Identifier: <?php echo $row['workerIdentifier'] ?></p>
         <p>Worker Paypal: <?php echo $row['workerPaypal'] ?></p>
-        <p>Worker Proof: </p><img src="<?php echo $row['crimeProof'] ?>">
+        <p>Worker Proof: </p><img width="30%" src="<?php echo $row['crimeProof'] ?>">
         <center><button class="action" onclick="location.href='?closeJob=<?php echo $row['crimeUuid'] ?>&workerUuid=<?php echo $row['workerUuid'] ?>';">Close Job</button></center>
       <?php endif; ?>
     <?php } ?>
