@@ -92,6 +92,7 @@ require_once 'assets/php/time_elapsed.php';
 </body>
 <?php endif; ?>
 
+
 <!-- JOB DETAILS (SELLER) -->
 
 <?php if((isset($job) || isset($claimJob)) && ($sellerUuid == $_SESSION['userUuid']) && (!isset($award))) : ?>
