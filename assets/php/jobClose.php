@@ -30,10 +30,6 @@ if($stmt = mysqli_prepare($link, $query)){
     echo "That SQL be fucked";
 }
 
-$query = "";
-$link = "";
-$stmt = "";
-
 $query = "UPDATE criminals SET userRep = userRep + 10 WHERE userUuid=?";
 
 if($stmt = mysqli_prepare($link, $query)){
@@ -53,10 +49,6 @@ if($stmt = mysqli_prepare($link, $query)){
 } else {
     echo "That SQL be fucked";
 }
-
-$query = "";
-$link = "";
-$stmt = "";
 
 $query = "UPDATE criminals SET userRep = userRep + 10 WHERE userUuid=?";
 
