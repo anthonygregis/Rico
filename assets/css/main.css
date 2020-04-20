@@ -484,7 +484,7 @@ body .entries .entry:nth-child(2n) .title.big:before {
   .jobDetails form > input, textarea {
     background: transparent;
     color: red;
-    width: 40%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
