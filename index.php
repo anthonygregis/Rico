@@ -146,7 +146,7 @@ require_once 'assets/php/time_elapsed.php';
         <p>Worker Identifier: <?php echo $row['workerIdentifier'] ?></p>
         <p>Worker Paypal: <?php echo $row['workerPaypal'] ?></p>
         <p>Worker Proof: </p><img src="<?php echo $row['crimeProof'] ?>">
-        <center><button class="action" onclick="location.href='?closeJob=<?php echo $row['crimeUuid'] ?>';">Close Job</button></center>
+        <center><button class="action" onclick="location.href='?closeJob=<?php echo $row['crimeUuid'] ?>&workerUuid=<?php echo $row['workerUuid'] ?>';">Close Job</button></center>
       <?php endif; ?>
     <?php } ?>
   </section>
