@@ -1,8 +1,8 @@
 <?php
 
 require_once 'assets/php/sessionManage.php';
-//require_once 'assets/php/darkTracker.php';
 require_once 'assets/php/resolveUrl.php';
+require_once 'assets/php/darkTracker.php';
 require_once 'assets/php/time_elapsed.php';
 
 ?>
