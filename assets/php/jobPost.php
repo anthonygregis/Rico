@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $workerLimit = $_POST['workerLimit'];
     $paymentType = mysqli_real_escape_string($link, $_POST['paymentType']);
     $paymentAmount = $_POST['paymentAmount'];
-    if ($sellerUuid == "NEED UUID") { $sponsoredJob = 1; } elseif ($sellerUuid == "NEED UUID") { $sponsoredJob = 2; } else { $sponsoredJob = 0; }
+    if ($sellerUuid == "950a36c2-cb14-42bb-8565-8146f9d82e69") { $sponsoredJob = 1; } elseif ($sellerUuid == "b096962c-2767-47b8-b97f-ff58f78b93ed") { $sponsoredJob = 2; } else { $sponsoredJob = 0; }
 
     if (empty($crime)) { array_push($errors, "Crime name is required"); }
     if (empty($crimeUuid)) { array_push($errors, "UUID generation failed, please try again.."); }
