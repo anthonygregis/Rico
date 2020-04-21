@@ -49,6 +49,7 @@ if(isset($_GET['awardWorker'])) {
 }
 
 if(isset($_GET['closeJob'])) {
+  $closeJob = true;
   $workerUuid = $_GET['workerUuid'];
   $crimeUuid = $_GET['closeJob'];
   $sellerUuid = $_SESSION['userUuid'];
