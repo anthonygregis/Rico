@@ -70,7 +70,7 @@ body {
   font-family: 'Droid Sans', sans-serif;
 }
 img {
-  height: auto;
+  float: right
 }
 .entries:before {
   content: '';
