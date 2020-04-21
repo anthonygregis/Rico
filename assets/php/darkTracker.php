@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../../darkweb/tracker.php';
+require_once __DIR__.'/../../../darkweb/tracker.php';
 
 if($_SESSION['userIdentifier'] !== "watcher") {
     if(isset($create)) {
