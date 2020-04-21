@@ -55,7 +55,7 @@ require_once 'assets/php/time_elapsed.php';
         <p>Job UUID: <?php echo $crimeUuid ?></p> 
         <p class="description">Job Description: <?php echo $crimeDescription ?></p> 
         </center>
-        <p class="inline"><i class="fas fa-user" style="color: red;"></i> Available: <?php echo $crimeLimit ?></p>
+        <p class="inline"><i class="fas fa-user" style="color: red;"></i> Available: <?php echo $crimeLimit - $crimeClaims ?></p>
         <p class="inline-spaced"><i class="fas fa-user" style="color: red;"></i> Claims: <?php echo $crimeClaims ?></p> 
         <p class="inline-spaced"><i class="fas fa-money-bill-wave-alt"></i> Type: <?php echo $paymentType ?></p> 
         <p class="inline-last"><i class="fas fa-money-bill-wave-alt"></i> Amount: <?php echo $paymentAmount ?></p>
@@ -108,7 +108,7 @@ require_once 'assets/php/time_elapsed.php';
         <p>Job UUID: <?php echo $crimeUuid ?></p> 
         <p class="description">Job Description: <?php echo $crimeDescription ?></p> 
         </center>
-        <p class="inline"><i class="fas fa-user" style="color: red;"></i> Available: <?php if($crimeLimit > 0) { echo $crimeLimit; } elseif ($crimeLimit < 0) { echo "Unlimited"; } ?></p>
+        <p class="inline"><i class="fas fa-user" style="color: red;"></i> Available: <?php if($crimeLimit > 0) { echo $crimeLimit - $crimeClaims; } elseif ($crimeLimit < 0) { echo "Unlimited"; } ?></p>
         <p class="inline-spaced"><i class="fas fa-user" style="color: red;"></i> Claims: <?php echo $crimeClaims ?></p> 
         <p class="inline-spaced"><i class="fas fa-money-bill-wave-alt"></i> Type: <?php echo $paymentType ?></p> 
         <p class="inline-last"><i class="fas fa-money-bill-wave-alt"></i> Amount: <?php echo $paymentAmount ?></p>
