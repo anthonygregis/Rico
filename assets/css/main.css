@@ -503,7 +503,7 @@ body .entries .entry:nth-child(2n) .title.big:before {
     background-color: transparent;
     color: red;
     padding: 14px 20px;
-    width: 10%;
+    width: 30%;
     margin-left: 30%;
     margin-right: 30%;
     border: 1px solid red;
