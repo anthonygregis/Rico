@@ -435,6 +435,9 @@ body .entries .entry:nth-child(2n) .title.big:before {
     text-align: right;
     margin-left: 8%;
   }
+  .jobDetails input[type=submit] {
+    width: 30%;
+  }
   .jobCreate {
     margin: auto;
     color: red;
